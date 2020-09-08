@@ -1,0 +1,35 @@
+rootProject.name='wukong-demo-lowversion'
+/**
+ * 一个空的项目
+ */
+//include ':app'
+/**
+ * 各项目中查找天籁声卡的方法
+ */
+//include ':findcard'
+/**
+ *hash功能 sha128家族 md5sum
+ */
+//include ':hash-md5'
+/**
+ * mic滚码加密解密的代码
+ * hid 支持和 keyid 读取
+ */
+//include ':micserialnumdes'
+/**
+ * findcard 和 micserialnumdes
+ * 的结合用于最新hidmic的识别
+ */
+//include ':findcardhid'
+/**
+ * 管理多线程的 JavaVM与JNIEnv
+ */
+//include ':jvmmanager'
+/**
+ * 时间管理
+ * 比如audio io出错时，读写速率已经改变，
+ * 后为了保证对整体工作的时间没有影响，比如快进快退，
+ * 进行阻塞操作。
+ * 定时器等功能。
+ */
+include ':timer'
