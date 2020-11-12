@@ -29,7 +29,21 @@ rootProject.name='wukong-demo-lowversion'
  * 时间管理
  * 比如audio io出错时，读写速率已经改变，
  * 后为了保证对整体工作的时间没有影响，比如快进快退，
- * 进行阻塞操作。
+ * 进行阻塞usleep操作，精确度为ms
  * 定时器等功能。
  */
-include ':timer'
+//include ':timer'
+/**
+ * webrtc中的信号处理这里面的demo只是使用了agc的功能
+ * 其中还有 重采样 降噪 两个功能没有使用有待以后开发。
+ */
+//include ':webrtcsingelproc'
+
+/**
+ * oboe中 重采样和 声道转换的代码
+ */
+//include ':oboe-channelresampler'
+/**
+ * OPENGL 基础知识
+ */
+include ':glabc'

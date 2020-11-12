@@ -18,7 +18,7 @@
 //#include<iostream>
 #define FIND_CARD_LOG "FINDCARD"
 #ifdef FIND_CARD_LOG
-#define LOGE(fmt, args...) __android_log_print(ANDROID_LOG_ERROR, FIND_CARD_LOG, fmt, ##args)
+#define LOGE(fmt, args...) //__android_log_print(ANDROID_LOG_ERROR, FIND_CARD_LOG, fmt, ##args)
 //#define LOGE(fmt, args...) printf( fmt, ##args)
 #else
 #define LOGE(fmt, args...)

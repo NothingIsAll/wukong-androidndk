@@ -48,13 +48,13 @@ void JniThreadEnvManager::jvmDetachCurrent() {
     jvm->DetachCurrentThread();
 }
 JniThreadEnvManager::JniThreadEnvManager() {
-    m_mutex.lock();
+//    m_mutex.lock();
     isdefaultCreate = true;
     jvm = JvmOBJ::getJvm();
     isattached = jvmAttachWithName((char*) nullptr);
     DLOG("JniThreadNameSet::insert id = %d,envp=%d,linenum=%d isattached=%d", gettid(), pEnv, __LINE__, isattached);
     threadinfolist.insert(std::make_pair(gettid(),this));
-    m_mutex.unlock();
+//    m_mutex.unlock();
 }
 JniThreadEnvManager::JniThreadEnvManager(char *tname) {
     m_mutex.lock();
@@ -81,13 +81,13 @@ JniThreadEnvManager::~JniThreadEnvManager() {
 JNIEnv* JniThreadEnvManager::getCurrentEnv() {
     m_mutex.lock();
     JNIEnv* env;
-    if((env = findCurrentEnv())){
+    if((env = findCurrentEnv()) != nullptr){
         m_mutex.unlock();
         return env;
     }else{
 //        new JniThreadEnvManager();
 //        env = findCurrentEnv();
-//        m_mutex.unlock();
+        m_mutex.unlock();
         return nullptr;//env;
     }
     return nullptr;

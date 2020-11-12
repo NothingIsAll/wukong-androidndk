@@ -2,7 +2,7 @@
 // Created by TLKG-014 on 2020/7/2.
 //
 
-#define LOG_TAG "FindCardHid"
+//#define LOG_TAG "FindCardHid"
 
 #include <cstdio>
 #include <cstring>

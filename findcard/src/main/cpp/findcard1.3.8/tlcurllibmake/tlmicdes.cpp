@@ -1,4 +1,4 @@
-#define LOG_TAG "MICDECODE"
+//#define LOG_TAG "MICDECODE"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -460,13 +460,13 @@ int main(int argc,char** argv)
 		char ecodemd5[1024] ={};
 		while((fgets(s1,100,srcfp)))
 		{
-			printf("fgets = %s\n",s1);
-			printf("this char 13 is :%c\n",s1[13]);
+//			printf("fgets = %s\n",s1);
+//			printf("this char 13 is :%c\n",s1[13]);
 			memset(src16,0,sizeof(src16));
 			memcpy(src16,s1,14);
 			memset(dest16,0,sizeof(dest16));
 			Do_DES(src16,key16,dest16,'e');
-			printf("dest16 = %s\n",dest16);
+//			printf("dest16 = %s\n",dest16);
 			memset(ecodetmp,0,99);
 			sprintf(ecodetmp,"\n%s",dest16);
 			fwrite(ecodetmp,17,1,didfp);
@@ -490,13 +490,13 @@ int main(int argc,char** argv)
 		
 		while((fgets(s1,100,didfp)))
 		{
-			printf("fgets = %s\n",s1);
-			printf("this char 15 is :%c\n",s1[15]);
+//			printf("fgets = %s\n",s1);
+//			printf("this char 15 is :%c\n",s1[15]);
 			memset(src16,0,sizeof(src16));
 			memcpy(src16,s1,16);
 			memset(dest16,0,sizeof(dest16));
 			Do_DES(src16,key16,dest16,'d');
-			printf("dest16 = %s\n",dest16);
+//			printf("dest16 = %s\n",dest16);
 			memset(ecodetmp,0,99);
 			sprintf(ecodetmp,"\n%s",dest16);
 			fwrite(ecodetmp,15,1,resrcfp);
