@@ -9,7 +9,7 @@
 #include <jni.h>
 #include <android/log.h>
 #ifdef LOG_TAG
-#define DLOG(fmt, args...) //__android_log_print(ANDROID_LOG_ERROR, LOG_TAG,"[SOjnifindcard]:  " fmt "  [line=%d,fun=%s ]", ##args,__LINE__,__FUNCTION__)
+#define DLOG(fmt, args...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG,"[glabc]:  " fmt "  [line=%d,fun=%s ]", ##args,__LINE__,__FUNCTION__)
 #else
 #define DLOG(fmt, args...) //可执行文件中定义printf方法#printf(fmt,##args);
 #endif

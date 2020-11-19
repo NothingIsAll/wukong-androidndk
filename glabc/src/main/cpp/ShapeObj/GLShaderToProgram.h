@@ -11,7 +11,9 @@
 class GLShaderToProgram {
 public:
     GLuint LoadShader(GLenum shaderType, const char *pSource);
-
+    GLuint CreateProgram(const char *pVertexShaderSource, const char *pFragShaderSource, GLuint &vertexShaderHandle, GLuint &fragShaderHandle);
+    void DeleteProgram(GLuint &program);
+    void CheckGLError(const char *pGLOperation);
 
 };
 

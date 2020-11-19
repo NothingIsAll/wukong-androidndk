@@ -29,7 +29,6 @@ public class MyGLSurfaceView extends GLSurfaceView {
          * 设置绘制模式
          * RENDERMODE_WHEN_DIRTY
          * when the surface is created, or when {@link #requestRender} is called.
-         *
          * RENDERMODE_CONTINUOUSLY
          * render不断地被系统调用
          */
@@ -69,7 +68,7 @@ public class MyGLSurfaceView extends GLSurfaceView {
 
         @Override
         public void onDrawFrame(GL10 gl) {
-            XLog.LogOut( "onDrawFrame() called with: gl = [" + gl + "]");
+//            XLog.LogOut( "onDrawFrame() called with: gl = [" + gl + "]");
             myNativeRender.native_OnDrawFrame();
         }
     }
