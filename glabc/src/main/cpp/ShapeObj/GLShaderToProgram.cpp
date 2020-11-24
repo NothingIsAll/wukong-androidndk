@@ -69,12 +69,12 @@ GLuint GLShaderToProgram::CreateProgram(const char *pVertexShaderSource, const c
          * 装载顶点shader对象到着色器程序对象
          */
         glAttachShader(program, vertexShaderHandle);
-        CheckGLError("glAttachShader");
+        CheckGLError("glAttachShader vertexShaderHandle");
         /**
          * 装载片段shader对象到着色器程序对象
          */
         glAttachShader(program, fragShaderHandle);
-        CheckGLError("glAttachShader");
+        CheckGLError("glAttachShader fragShaderHandle");
         /**
          * 生成着色器程序对象过程中，链接各种着色器对象
          */

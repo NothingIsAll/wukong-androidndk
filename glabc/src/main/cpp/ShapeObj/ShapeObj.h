@@ -10,6 +10,8 @@ public:
     virtual void init()=0;
     virtual void draw()=0;
     virtual void release()=0;
+//    char* vertexShaderSource=0;
+//    char* fragmentShaderSource = 0;
 };
 
 #endif //WUKONG_DEMO_LOWVERSION_SHAPEOBJ_H

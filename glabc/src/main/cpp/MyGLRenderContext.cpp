@@ -8,6 +8,7 @@
 #include "TLMicLog.h"
 #include "GLCommon.h"
 #include "NativeImage.h"
+#include "GLABC_config.h"
 
 
 MyGLRenderContext* MyGLRenderContext::m_pContext = nullptr;
@@ -59,7 +60,7 @@ void MyGLRenderContext::OnSurfaceCreated()
      */
     glClearColor(1.0f,1.0f,0.5f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-    drawsamples.init();
+    GLABC_config::getDrawEng()->init();
 }
 
 void MyGLRenderContext::OnSurfaceChanged(int width, int height)
@@ -79,7 +80,7 @@ void MyGLRenderContext::OnDrawFrame()
      */
     glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 
-    drawsamples.draw();
+    GLABC_config::getDrawEng()->draw();
 
 
 }

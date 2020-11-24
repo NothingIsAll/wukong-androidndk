@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/glabc/src/main/cpp/FreeImage/LibJXR/common/include/guiddef.h" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/glabc/src/main/cpp/FreeImage/LibJXR/image/sys/strcodec.h" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/glabc/src/main/cpp/FreeImage/LibJXR/jxrgluelib/JXRGlue.h" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/glabc/src/main/cpp/FreeImage/Source/FreeImage.h" charset="ISO-8859-1" />
+  </component>
+</project>

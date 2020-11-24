@@ -6,12 +6,16 @@ add_library(glabc
         SHARED
         ShapeObj/GLShaderToProgram.cpp
         MyGLRenderContext.cpp
+        GLABC_config.cpp
         glabc_jni.cpp)
 
 find_library(
         log-lib
         log)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/FreeImage)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/ShapeObj)
+
 target_link_libraries(glabc
         shapeobj
         android

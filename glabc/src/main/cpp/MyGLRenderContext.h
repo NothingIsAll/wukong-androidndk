@@ -23,7 +23,7 @@ public:
     void OnDrawFrame();
 
 private:
-    VertexObj drawsamples;
+//    VertexObj* drawsamples;
 
 };
 

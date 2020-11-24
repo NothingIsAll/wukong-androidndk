@@ -17,7 +17,7 @@ public:
     void release();
 
 private:
-    GLuint VBO,VAO;
+    GLuint VBO,VAO,EBO;
     /**
      * 标准化设备坐标，NDC(Normailzed Device Coordinates)
      * xyz 三轴的范围 是 -1 ~ 1
@@ -25,9 +25,14 @@ private:
      * 这些坐标 会通过 glViewPort()提供的数据，进行视口变换(Viewport Transform)
      * 视口变换成功后 空间坐标 变成了屏幕的像素，然后输入到片段着色器。
      */
-    const GLfloat vertices[9] = { -0.5f, -0.5f, 0.0f,
+    const GLfloat vertices[12] = { -0.5f, -0.5f, 0.0f,
                            0.5f,  -0.5f, 0.0f,
-                           0.0f,  0.5f, 0.0f };
+                           0.5f,  0.5f, 0.0f,
+                           -0.5f, 0.5f, 0.0f};
+
+    const int indices[6]={
+            0,1,2,
+            2,3,0};
     /**
      *顶点着色器 Vertext shader
      * 第一行：版本生命
@@ -59,6 +64,7 @@ private:
     GLShaderToProgram shaderToProgram;
     GLuint vertexshader,fragmentshader,program;
     void VBOinit();
+    void EBOinit();
     void ShaderSrctoProgram();
     void LinkVAtoLocation();
 
