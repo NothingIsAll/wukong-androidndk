@@ -20,7 +20,7 @@ rootProject.name='wukong-demo-lowversion'
  * findcard 和 micserialnumdes
  * 的结合用于最新hidmic的识别
  */
-//include ':findcardhid'
+include ':findcardhid'
 /**
  * 管理多线程的 JavaVM与JNIEnv
  */
@@ -31,6 +31,8 @@ rootProject.name='wukong-demo-lowversion'
  * 后为了保证对整体工作的时间没有影响，比如快进快退，
  * 进行阻塞usleep操作，精确度为ms
  * 定时器等功能。
+ * 目前有个问题可能会多线程不安全，
+ * 这一点 还需多加验证
  */
 //include ':timer'
 /**
