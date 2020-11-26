@@ -12,6 +12,7 @@ class FIBITMAP;
 class ImageLoad {
 public:
     bool load_from_file(char * filename);
+    bool save_to_file(char *filename);
     FIBITMAP* bitmap;
     int width, height;
     char* imgdata;

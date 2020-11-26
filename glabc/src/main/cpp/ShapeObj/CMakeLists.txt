@@ -7,4 +7,5 @@ add_library(shapeobj
         ${FILE_SHAPEOBJ})
 target_link_libraries(shapeobj
         FreeImage
+        yuv
 )

@@ -13,6 +13,7 @@ private:
     static ShapeObj* drawEngIns;
 public:
     static char* ShapeObj_Texture_ImageName;
+    static char* ShapeObj_TextureUnitsSaveImageName;
     static ShapeObj* getDrawEng();
 
 };

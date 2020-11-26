@@ -140,7 +140,7 @@ void TextureObj::initTexture2D() {
      * 第七第八个参数定义了源图的格式和数据类型。我们使用RGB值加载这个图像，并把它 们储存在char(byte)，我们将会传入相应值。
      * 最后一个参数是真实的图像数据。
      */
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, imageLoad.width, imageLoad.height, 0, GL_RGBA, GL_UNSIGNED_BYTE,imageLoad.imgdata);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, imageLoad.width, imageLoad.height, 0, GL_RGB, GL_UNSIGNED_BYTE,imageLoad.imgdata);
     /**
      * 这个自动创建多级渐远纹理
      * 如果没有设置多级渐远的过滤模式，则无需设置。

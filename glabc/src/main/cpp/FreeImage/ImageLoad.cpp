@@ -7,6 +7,14 @@
 #include "ImageLoad.h"
 #include "../TLMicLog.h"
 
+bool ImageLoad::save_to_file(char *filename)
+{
+    if (FreeImage_Save(FIF_JPEG,bitmap,filename,0) )
+        return true;
+    else
+        return false;
+}
+
 bool ImageLoad::load_from_file(char *filename) {
     this->filename = std::string(filename);
     FREE_IMAGE_FORMAT fif = FIF_UNKNOWN;
@@ -56,10 +64,10 @@ bool ImageLoad::load_from_file(char *filename) {
     blue_mask = FreeImage_GetBlueMask ( dib ) ;
     DLOG("red_mask =%d,green_mask=%d,blue_mask=%d",red_mask,green_mask,blue_mask);
 
-    bitmap = FreeImage_Allocate(width,height,32);
+    bitmap = FreeImage_Allocate(width,height,24);
     //转换为 rgba 的图元格式
     //32 = 4*8 每个颜色8bit，是通用的图元格式
-    bitmap= FreeImage_ConvertTo32Bits(dib);
+    bitmap= FreeImage_ConvertTo24Bits(dib);
     imgdata = (char*)FreeImage_GetBits(bitmap);
     //翻转每个颜色值
     //FreeImage_Invert(bitmap);

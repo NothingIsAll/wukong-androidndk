@@ -45,5 +45,8 @@ rootProject.name='wukong-demo-lowversion'
 //include ':oboe-channelresampler'
 /**
  * OPENGL 基础知识
+ * freeimage 的源码编译
+ * libyuv 的源码编译
+ * 都在这个项目里
  */
 include ':glabc'

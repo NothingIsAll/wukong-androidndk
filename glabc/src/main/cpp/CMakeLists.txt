@@ -12,7 +12,7 @@ add_library(glabc
 find_library(
         log-lib
         log)
-
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/libyuv)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/FreeImage)
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/ShapeObj)
 
